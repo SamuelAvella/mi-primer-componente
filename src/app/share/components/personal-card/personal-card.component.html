@@ -1,31 +1,7 @@
 <link rel="stylesheet" href="personal-card.component.scss">
 
-<!--<ion-card>
-  <ion-card-header>
-    <ion-card-title>
-      <ion-avatar>
-        <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
-      </ion-avatar>
-      <ion-label>{{name}} {{surname | slice:0:1 | uppercase}}.</ion-label>
-    </ion-card-title>
-  </ion-card-header>
 
-  <ion-card-content>
-    
-    <ion-card-title>Nombre</ion-card-title>
-    <ion-card-subtitle>{{name}}</ion-card-subtitle>
-
-    <ion-card-title>Apellido</ion-card-title>
-    <ion-card-subtitle>{{surname}}</ion-card-subtitle>
-
-    <ion-card-title>Edad</ion-card-title>
-    <ion-card-subtitle>{{age}}</ion-card-subtitle>
-
-    
-  </ion-card-content>
-</ion-card>-->
-
-<ion-card href="/welcome">
+<ion-card>
   <ion-card-header>
     <ion-card-title>
       <ion-grid>
@@ -37,6 +13,12 @@
           </ion-col>
           <ion-col>
             <ion-text>{{name}} {{surname | slice:0:1 | uppercase}}.</ion-text>
+          </ion-col>
+          <ion-col size="2">
+            <ion-button class="fav-button" fill="clear" aria-label="Favorite">
+              <ion-icon *ngIf="isFav" slot="icon-only" name="heart" color="danger"></ion-icon>
+              <ion-icon *ngIf="!isFav" slot="icon-only" name="heart" color="medium"></ion-icon>
+            </ion-button>
           </ion-col>
         </ion-row>
       </ion-grid>

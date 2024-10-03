@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Usuario
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,29 +9,19 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Usuarios</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <form (ngSubmit)="onSubmit(nameInput, surnameInput, ageInput)" id="newUserForm">
+    <ion-list>
+      <ion-input label="Nombre" type="text" labelPlacement="floating" placeholder="Nombre" #nameInput></ion-input>
+      <ion-input label="Apellido" type="text" labelPlacement="floating" placeholder="Apellido" #surnameInput></ion-input>
+      <ion-input label="Edad" type="text" labelPlacement="floating" placeholder="Edad" #ageInput></ion-input>
+      <ion-button type="submit">Enviar</ion-button>
+    </ion-list>
+  </form>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
   <ion-grid>
     <ion-row>
       <ion-col *ngFor="let u of users">

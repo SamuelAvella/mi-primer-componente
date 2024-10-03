@@ -5,7 +5,9 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
-import { PersonalCardComponent } from '../personal-card/personal-card.component';
+import { PersonalCardComponent } from '../share/components/personal-card/personal-card.component';
+import { ShareModule } from '../share/share.module';
+import { share } from 'rxjs';
 
 
 @NgModule({
@@ -13,8 +15,9 @@ import { PersonalCardComponent } from '../personal-card/personal-card.component'
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
+    ShareModule
   ],
-  declarations: [HomePage, PersonalCardComponent]
+  declarations: [HomePage]
 })
 export class HomePageModule {}
